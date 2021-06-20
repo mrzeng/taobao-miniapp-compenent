@@ -1,0 +1,37 @@
+/* 选择 */
+.cpt-item-card-checked{
+  width: 251px;
+  height: 54px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: 2px solid #F56568;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  color:#333333;
+  font-size: 12px;
+}
+
+
+
+/* 未选中 */
+.cpt-item-card{
+  width: 251px;
+  height: 54px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: 1px solid #DDDDDD;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  color:#333333;
+  font-size: 12px;
+}
+.cpt-item-card .check-icon{
+  width: 16px;
+  height: 16px;
+  border:1px solid #DDDDDD;
+  border-radius: 3px;
+  margin-right: 4px;
+}

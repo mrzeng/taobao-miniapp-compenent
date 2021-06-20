@@ -1,0 +1,10 @@
+<view class="s_select" catchTap="ontap">
+  <text class="s_value {{sValue ? '' : 'no_value'}}">{{sValue ? sValue : sPlaceholder}}</text>
+  <image class="s_icon {{isUnfold ? 's_active' : ''}}" mode="scaleToFill" src="/assets/images/down-icon.png"/>
+  <view class="s_content {{isUnfold ? 's_active' : ''}}">
+    <view class="s_item {{sIndex === index ? 's_active' : ''}} {{item.disabled === true ? 's_disabled' : ''}}" a:for="{{list}}" a:key="{{index}}" data-index="{{index}}" catchTap="selectTap">
+      {{item[key]}}
+    </view>
+  </view>
+  <view class="s_mask" catchTap="closeSelect" a:if="{{isUnfold}}"></view>
+</view>

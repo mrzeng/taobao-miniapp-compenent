@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/pages-module-one/pages-module-one",
+    "pages/index/index"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

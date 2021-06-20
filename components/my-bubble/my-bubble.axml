@@ -1,0 +1,8 @@
+ <text class="cpt-help-triangle-icon">
+  <image mode="scaleToFill"  style="width:14px;height:14px;background-color:#F8B845; margin-left:10px;border-radius:50%;" src="../../../../assets/images/entrust/icon_gantanhao.png"/>
+  <view class="cpt-help-triangle-box">
+    <view class="cpt-help-triangle">
+      <slot>提示说明文字</slot>
+    </view>
+  </view>
+</text>

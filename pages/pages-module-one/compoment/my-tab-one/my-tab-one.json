@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "item-card":"../item-card/item-card",
+    "item-add":"../item-add/item-add"
+  }
+}

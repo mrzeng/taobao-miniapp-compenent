@@ -1,0 +1,23 @@
+.cpt-my-pagination{
+  display: flex;
+  margin:20px;
+  align-items: center;
+  /* border:1px solid tomato; */
+}
+
+
+
+/* pagination */
+.next-pagination .next-pagination-item.next-current:hover, .next-pagination .next-pagination-item.next-current:focus{
+  background:tomato;
+}
+.next-pagination .next-pagination-item.next-current:hover, .next-pagination .next-pagination-item.next-current:hover{
+  background:tomato;
+}
+.next-pagination .next-pagination-item.next-current{
+  background:tomato;
+  border-color: tomato;
+}
+.next-pagination-display em{
+  color:tomato !important;
+}

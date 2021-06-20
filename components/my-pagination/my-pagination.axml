@@ -1,0 +1,17 @@
+ <view class="cpt-my-pagination {{ (align=='center') ? 'g-flex-center' : '' }}  {{  align=='right' ? 'g-flex-right':'' }}"  >
+    <pagination 
+        size="{{size}}"
+        type="{{type}}"
+        shape="{{shape}}"
+        current="{{current}}"
+        defaultCurrent="{{defaultCurrent}}" 
+        total="{{total}}" 
+        pageShowCount="{{pageShowCount}}" 
+        pageSize="{{pageSize}}" 
+        pageSizeSelector="{{pageSizeSelector}}"
+        pageSizeList="{{pageSizeList}}"
+        pageSizePosition="{{pageSizePosition}}"
+        useFloatLayout="{{useFloatLayout}}"
+        onChange="onChange"
+        onPageSizeChange="onPageSizeChange" />
+ </view>

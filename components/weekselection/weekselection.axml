@@ -1,0 +1,9 @@
+<view style="display:inline-block;">
+   <select 
+       onChange="onChange" 
+       onBlur="onBlur" 
+       defaultValue="{{ defaultValueSelf }}" 
+       showSearch hasClear>
+      <option a:for="{{datasoure}}" value="{{item.val}}">{{item.lable}}</option>
+  </select>
+</view>

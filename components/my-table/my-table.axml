@@ -1,0 +1,43 @@
+<view>
+  <!-- <view class="com-sub-title">自定义列内容</view> -->
+  <table dataSource="{{datasource}}" onSort="onSort">
+
+    <!-- <table-column title="序号" dataIndex="id" /> -->
+    <!-- <table-column title="Title" dataIndex="title" /> -->
+    <!-- <table-column title="Time" dataIndex="time" /> -->
+
+    <!-- <table-column title="操作列" dataIndex="id">
+      <view slot-scope="x" >
+        <view a:if="{{isEditor}}">{{testValue}}</view>
+      </view>
+      <view slot-scope="x" style="background:tomato;border-radius:4rpx;display:inline-block;width:50rpx;height:24rpx;color:#ffffff;"> 
+       <view style="display:inline-block;">
+        tag标签 
+       </view> 
+        <image 
+            style="width:40rpx;height:30rpx;"
+            mode="scaleToFill"
+            src="/assets/images/contact_ad.jpg" />
+      </view>
+      <button slot-scope="x" data-id="{{x.value}}" onTap="remove">Remove {{x.value}}</button>
+      <button slot-scope="x" data-id="{{x.value}}" onTap="remove">Remove {{x.value}}</button>
+    </table-column> -->
+
+
+      <!-- 简单的动态列表格 -->
+      <table-column
+        a:if="{{type===2}}"
+        a:for="{{tablesource}}"
+        title="{{item.colName}}" 
+        dataIndex="{{item.colData}}"
+        sortable="{{item.sortable}}">
+      </table-column>
+
+
+  <!-- <table-column title="操作列" dataIndex="id">
+          <view slot-scope="x"> {{x.value}} <slot slot-scope="x">--{{x.value}}</slot> </view>
+        </table-column> -->
+      <!-- <table-column a:if="{{item.operate}}">
+      </table-column> -->
+  </table>
+</view>

@@ -1,0 +1,12 @@
+.entrustTabTwe-cueMessage{
+  display: flex;
+  height: 56px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  border: 1px solid #E4E7ED;
+  font-size: 16px;
+  font-family: MicrosoftYaHei;
+  align-items: center;
+  padding-left: 24px;
+}

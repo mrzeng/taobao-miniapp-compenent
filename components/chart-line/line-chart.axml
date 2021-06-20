@@ -1,0 +1,38 @@
+<view class="canvas_box">
+  <view>
+    <!-- 数据渲染层 -->
+    <canvas id="{{lCanvasId}}" canvas-id="{{lCanvasId}}" class="canvas"></canvas>
+    <!-- 效果蒙版层 -->
+    <!-- <canvas id="{{maskCanvasId}}" class="mask_canvasid"></canvas> -->
+    <view class="mask_wrap">
+      <view class="{{isShowMask ? 'mask_canvasid on' : 'mask_canvasid'}}"></view>
+    </view>
+    <!-- 坐标层 -->
+    <canvas id="{{gridCanvasId}}" class="grid_maskid"></canvas>
+    <view class="canvas_mask">
+      <view class="canvas_mask_each" a:for="{{hoverData.data1}}" a:for-item="item" a:for-index="index" a:key="{{Math.random()}}" style="{{`width:${stepW}px;`}}">
+        
+        <view class="hover_show" style="{{`top: ${points[index][1]}px;left:${points[index][0]}px`}}">
+          <view class="detail_1" a:if="{{hoverData.type == 2}}">
+            {{`${index < 10 ? ('0' + index) : index}:00`}}
+          </view>
+          <view class="detail_1 today" a:if="{{hoverData.type == 2}}">
+            {{`今日：${(item.today || item.today == 0) ? (item.today === '' ? '-' : item.today) : '-'}${item.today === '' ? '' : hoverUnit}`}}
+          </view>
+          <view class="detail_1 yesterday" a:if="{{hoverData.type == 2}}">
+            {{`昨日：${(item.yesterday || item.yesterday == 0) ? item.yesterday : '-'}${(item.yesterday || item.yesterday == 0) ? hoverUnit : ''}`}}
+          </view>
+          <view class="detail_1 date" a:if="{{hoverData.type == 1}}">
+            {{`${item.today}`}}
+          </view>
+          <view class="detail_1 history" a:if="{{hoverData.type == 1}}">
+            {{`${typeName}：${item.yesterday ? item.yesterday : '-'}${item.yesterday ? hoverUnit : ''}`}}
+          </view>
+        </view>
+      </view>
+      
+    </view>
+
+  </view>
+  
+</view>

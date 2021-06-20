@@ -1,0 +1,31 @@
+.cpt-help-triangle-icon:hover>.cpt-help-triangle-box{
+  display:unset;
+}
+.cpt-help-triangle-box{
+  position: relative;
+  display: none;
+}
+.cpt-help-triangle{
+  position: absolute;
+  width: 280px;
+  height: 130px;
+  line-height: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E4E7ED;
+  padding:24px 16px;
+  border-radius:4px;
+  top:-146px;
+  left:-126px; 
+  overflow: scroll;
+}
+.cpt-help-triangle-box::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:50%; 
+  border:12px solid transparent;
+  border-top-color:#ffffff;
+  border-bottom:0; 
+  margin:0 0 8px 4px;
+}

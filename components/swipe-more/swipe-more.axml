@@ -1,0 +1,38 @@
+<view>
+  <mouseable-view onMouseover="over1" onMouseleave="leave2" class="swipe1">
+    <view class="swipe1_content">
+      <view class="swipe1_content_wrap" animation="{{animation1}}">
+        <view class="swipe1_content_each yellow">
+          {{lunbo[lunbo.length-1].content}}
+        </view>
+        <view class="swipe1_content_each yellow"
+          a:for="{{lunbo}}"
+          a:for-item="item"
+          a:for-index="i"
+          a:key="{{Math.random()}}"
+        >
+          {{item.content}}
+        </view>
+        <view class="swipe1_content_each yellow">
+          {{lunbo[0].content}}
+        </view>
+      </view>
+    </view>
+    <view class="turn_left" data-direction="left" onTap="change1">
+      往左边
+    </view>
+    <view class="turn_right" data-direction="right" onTap="change1">
+      往右边
+    </view>
+    <view class="swipe1_control1">
+      <view class="dot {{(siwpe2IndexAbs == (ii + 1) || siwpe2IndexAbs - lunbo.length == (ii + 1)) ? 'on' : ''}}"
+        a:for="{{lunbo}}"
+        a:for-item="d"
+        a:for-index="ii"
+        a:key="{{Math.random()}}"
+        data-index="{{ii}}"
+        onTap="changeTurn"
+      ></view>
+    </view>
+  </mouseable-view>
+</view>

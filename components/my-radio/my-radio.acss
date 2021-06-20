@@ -1,0 +1,89 @@
+.cpt-myRadio{
+  display: flex;
+}
+.cpt-myRadio-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.cpt-myRadio-item{
+  margin:16px 40px 16px 0;
+  
+}
+.cpt-myRadio-column .cpt-myRadio-item{
+  margin:6px 20px 6px 0;
+}
+.cpt-myRadio-item-unactive{
+  height: 14px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #606266;
+  line-height: 14px;
+  color:#606266;
+}
+.cpt-myRadio-item-unactive::before{
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  border:1px solid #D5D8DE;
+  margin-right: 4px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}
+.cpt-myRadio-item-active{
+  height: 14px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #F56567;
+  line-height: 14px;
+}
+.cpt-myRadio-item-active::before{
+  content: '';
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  border-radius: 50%;
+  border:4px solid #F56567;
+  margin-right: 4px;
+}
+
+
+
+/* tab风格radio 样式  */
+.cpt-myRadioTab-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* height: 36px; */
+  background: #F0F2F5;
+  border:2px solid #F0F2F5;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: MicrosoftYaHei;
+}
+.cpt-myRadioTab-item{
+  flex: 1;
+  height: 36px;
+}
+.cpt-myRadioTab-item-active{
+  min-width: 100px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 2px;
+  color: #F56568;
+}
+.cpt-myRadioTab-item-unactive{
+  min-width: 100px;
+  height: 34px;
+  border-radius: 2px;
+  color: #AAAAAA;
+  line-height: 34px;
+  text-align: center;
+}

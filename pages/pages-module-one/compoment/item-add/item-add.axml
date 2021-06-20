@@ -1,0 +1,14 @@
+<!-- 添加item 气泡 -->
+<view class="cpt-create-plan-balloon">
+  <view class="cpt-create-plan-title">新建一个item </view>
+  <input class="cpt-create-plan-input" value="{{planTitle}}" onInput="bindKeyInput" type="text" placeholder="item标题" />
+  <view class="cpt-create-plan-des">
+    <image mode="scaleToFill" style="width:13px;height:12px;margin-right:8px;" src="/assets/icon_gantanhao.png"/>
+    item创建后，将无法删除
+  </view>
+
+  <view class="cpt-create-plan-btns">
+    <view class="g-btn-capsule-gred" onTap="onCancel">取消</view>
+    <view class="g-btn-capsule-red" onTap="onSureCreatePlan">确定</view>
+  </view>
+</view>

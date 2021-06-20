@@ -1,0 +1,23 @@
+<view class="cpt_bouncing">
+  <view class="cpt_bouncing_cont" style="width:{{width}};"> 
+    <view class="cpt_bouncing_title">
+        <text>{{title}}</text> 
+        <text class="cpt_bouncing_title_r">
+          <slot name="title_r">
+            <view class="error"  onTap="closeBouncing"></view>
+          </slot>
+        </text>
+    </view>
+    <view class="cpt_bouncing_body">
+      <slot></slot>
+    </view>
+    <slot name="footer">
+      <view class="cpt_bouncing_footer">
+        <button size="default" type="warning"  onTap="closeBouncing" style="margin-right:4px;">{{textCancel}}</button>
+        <button size="default" type="primary"  onTap="onTapBouncingSure">{{textSure}}</button>
+      </view>
+    </slot>
+      
+  </view>
+  <view class="cpt_bouncing_bg"  onTap="closeBouncing"> </view>
+</view>

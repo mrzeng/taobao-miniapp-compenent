@@ -1,0 +1,3 @@
+<view class="pie">
+  <canvas class="pie_canvas" id="{{canvasId}}"></canvas>
+</view>

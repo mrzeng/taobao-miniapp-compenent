@@ -1,0 +1,19 @@
+<!-- 托管 -->
+<view class="pager-entrust-box">
+  <view class="entrust-title">
+    <view class="title-item title-item-active"  a:if="{{switchingTab==1}}"><view class="title-item-num">1</view>tab1-title</view>
+    <view class="title-item" a:else><view class="title-item-num">1</view>tab1-title</view>
+
+    <view class="title-item title-item-active" a:if="{{switchingTab==2}}"><view class="title-item-num">2</view>tab2-title</view>
+    <view class="title-item" a:else ><view class="title-item-num" >2</view>tab2-title</view>
+  </view>
+  <view class="entrust-content">
+    <my-tab-one a:if="{{switchingTab==1}}" onSetSubmitData="setSubmitData" submitData="{{submitData}}"></my-tab-one>
+    <my-tab-twe a:if="{{switchingTab==2}}" onSetSubmitData="setSubmitData" submitData="{{submitData}}"></my-tab-twe>
+    
+    <view  style="padding-top:20px;">
+       <view class="g-ntb-red-line" onTap="preTab"  a:if="{{switchingTab>1 }}" style="margin-right:30px;">上一步</view>
+       <view class="g-ntb-red"      onTap="nextTab" a:if="{{switchingTab<2 }}">下一步 </view>
+    </view>
+  </view>
+</view>

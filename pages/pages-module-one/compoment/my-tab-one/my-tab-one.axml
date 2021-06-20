@@ -1,0 +1,18 @@
+<view>
+   <!-- <view class="triangle-top" ></view> -->
+      <view onTap="showAdd" class="g-ntb-red">
+        <icon type="add" style="color: #fff; padding-right:6px;" size="xxs" />
+        <view> 新建计划</view>
+      </view>
+      <view a:if="{{switchAdd}}" style="position:relative;top:10px;left:20px;">
+        <item-add  onCancel="hideAdd"  onGetList="getList"></item-add>
+      </view>
+
+
+     <!-- itemList -->
+     <view class="tab-one-item-card-box">
+      <view  a:for="{{itemList}}" data-index="{{index}}" onTap="onCheckedItem" style="margin-right:24px;margin-bottom:24px;">
+       <item-card item="{{item}}"  ></item-card>
+      </view>
+     </view>
+</view>

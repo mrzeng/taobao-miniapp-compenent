@@ -1,0 +1,16 @@
+<view class="subtitle-component">
+  <view a:if="{{type==2}}" class="subtitle-component-type2">
+    <!-- <slot></slot> <slot name="rightbox"></slot> -->
+    <text class="subtitle-component-left"><slot>left</slot></text>
+    <text class="subtitle-component-right"><slot name="right"/></text>
+  </view>
+
+  <view a:if="{{type==3}}" class="subtitle-component-type3">
+    <text class="subtitle-component-left">
+      <text class="subtitle-icon-success"></text><slot>left</slot>
+    </text>
+    <text class="subtitle-component-right"><slot name="right"/></text>
+  </view>
+
+   <!-- <view class="error"></view> -->
+</view>

@@ -1,0 +1,11 @@
+<view class="entrustTabTwe">
+  <view class="entrustTabTwe-cueMessage">
+    <view style="color: #F56567;">
+      温馨提示：
+    </view>
+    <view style="color: #606266;">
+      {{formData.msg}}
+    </view>
+  </view>
+  
+</view>

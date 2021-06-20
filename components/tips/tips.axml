@@ -1,0 +1,6 @@
+<view class="l_tips">
+  <slot></slot>
+  <view class="t_content" style="{{contentStyle}}">
+    <slot name="content"></slot>
+  </view>
+</view>

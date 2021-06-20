@@ -1,0 +1,8 @@
+<view class="pick_wrap">
+  <range-picker hasClear="{{false}}" default-value="{{[start_time, end_time]}}" value="{{[sTime, eTime]}}" class="block" onChange="changeDate" onVisibleChange="onVisibleChange" /></range-picker>
+  <view class="pick_option" a:if="{{isShowFastBtn}}">
+    <view a:for="{{fastPiker}}" a:for-item="item" a:for-index="index" a:key="index" class="{{isSelect == index ? 'pick_item on' : 'pick_item'}}" data-rangedate="{{ item.value }}" data-id="{{index}}"  onTap="selectRangeDate">
+      {{item.label}}
+    </view>
+  </view>
+</view>

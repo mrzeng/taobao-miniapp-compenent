@@ -1,0 +1,28 @@
+<view class="history_echarts" id="history_echarts">
+  <canvas class="history_echarts_canvas" id="{{canvasId}}" canvas-id="{{canvasId}}"></canvas>
+  <canvas class="history_echarts_canvas" id="{{gridCanvasId}}" canvas-id="{{gridCanvasId}}"></canvas>
+  <mouseable-view class="hover_data" onMousemove="hoverCanvasUp" onMouseleave="leaveDetailEchart">
+    <mouseable-view 
+      a:for="{{historys}}"
+      a:for-item="item"
+      a:for-index="i"
+      a:key="{{Math.random()}}"
+      style="{{`width: ${stepW}px;height:100%;`}}"
+      class="hover_data_each"
+      data-x="{{item}}"
+      onMouseover="showDetailEchart"
+      onMouseout="leaveDetailEchart"
+    >
+    </mouseable-view>
+  </mouseable-view>
+
+  <view a:if="{{hoverMaskPosition.x > 0}}" class="hover_data_show" style="{{`top:${hoverMaskPosition.y}px;left: ${hoverMaskPosition.x}px;`}}">
+    <view class="date">
+      {{currentHoverShowData.date}}
+    </view>
+    <view class="each" a:for="{{showAttrs}}" a:for-item="item" a:key="{{Math.random()}}">
+      <view class="color {{randerColor[item]}}"></view>
+      {{`${dataToword[item]}：${currentHoverShowData.data[item] || ''}${dataToUnit[item]}`}}
+    </view>
+  </view>
+</view>

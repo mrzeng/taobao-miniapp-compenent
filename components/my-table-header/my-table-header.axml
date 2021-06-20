@@ -1,0 +1,62 @@
+<view class="common_table_header">
+  <view class="common_table_header_txt">
+    更多数据
+    <view class="common_table_header_icon"></view>
+  </view>
+  <!-- 设置弹窗 -->
+  <view class="{{isPlanSettingShow ? (dragAreaShowWhere ? 'plan_setting_pop show top' : 'plan_setting_pop show') : 'plan_setting_pop'}}">
+    <view class="plan_setting_pop_point"></view>
+    <view class="pop_top">
+      <view class="pop_top_title">
+        <view class="pop_top_title_reset" catchTap="onHandlePlanHeadReset">
+          <view class="reset_icon"></view>
+          恢复默认
+        </view>
+        <view class="pop_top_title_clear" catchTap="onHandlePlanHeadClear">
+          <view class="clear_icon"></view>
+          清空
+        </view>
+
+      </view>
+      <view class="pop_top_body">
+        <view class="pop_top_body_tip">
+          <view class="pop_top_body_tip_l">
+            <text> 显示数据最少2项，最多不能超过8项哦！</text>
+            <text> {{fieldDrag.length}}/8</text>
+          </view>
+          <view class="pop_top_body_tip_r">
+            列表可拖动排序
+          </view>
+        </view>
+
+        <view class="pop_top_body_content">
+          
+          <view class="pop_top_body_l">
+            <view class="field_intro" a:for="{{showField}}" a:for-item="item" a:for-index="index" a:key="{{Math.random()}}">
+              <view class="field_intro_in">
+                <checkbox disabled="{{fieldDrag.length >= 8 && !item.isSelect}}" data-event="change" onChange="setFieldShow" data-item="{{item.name}}" defaultChecked="{{item.isDefaultChecked}}" checked="{{item.isSelect}}" class="name">{{item.name}}</checkbox>
+                <tips mode="right" a:if="{{item.intro}}">
+                  <view slot="content">
+                    {{item.intro}}
+                  </view>
+                  <image mode="scaleToFill" src="/assets/images/icon_wh.png"/>
+                </tips>
+              </view>
+            </view>
+          </view>
+
+          <view class="pop_top_body_r">
+          
+            <mouseable-view class="pop_top_list" onMousemove="planDragMove">
+              <mouseable-view onMousedown="planDragStart" onMouseup="planDragEnd" style="{{`transform: translateY(${currentPlanTableIndex == index ? currengPlanTranslateY : 0}px);z-index:${currentPlanTableIndex == index ? 3 : 1};`}}" data-index="{{index}}" class="pop_top_list_item" a:for="{{fieldDrag}}" a:for-item="item" a:for-index="index" a:key="{{Math.random()}}">
+                {{item.name}}
+              </mouseable-view>
+            </mouseable-view>
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

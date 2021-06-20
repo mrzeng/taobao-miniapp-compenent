@@ -1,0 +1,26 @@
+<view class="cpt-myRadio {{column ? 'cpt-myRadio-column' : ''}}  {{type=='liketab' ? 'cpt-myRadioTab-content': ''}}"  >
+  
+
+  <!--类似 tab切换头部 风格 -->
+  <view class="cpt-myRadioTab-item" a:if="{{type=='liketab'}}" a:for="{{dataSource}}" >
+    <view a:if="{{item.value==value}}" class="cpt-myRadioTab-item-active" onTap="onChange">
+      {{item.label}}
+    </view>
+
+    <view a:else class="cpt-myRadioTab-item-unactive" data-value="{{item.value}}" onTap="onChange">
+    {{item.label}}
+    </view>
+  </view>
+
+  <!-- 类似 radio 风格 -->
+  <view class="cpt-myRadio-item" a:if={{type=='likeradio'}} a:for="{{dataSource}}" >
+    <view a:if="{{item.value==value}}" class="cpt-myRadio-item-active" onTap="onChange">
+      {{item.label}}
+    </view>
+
+    <view a:else class="cpt-myRadio-item-unactive" data-value="{{item.value}}" onTap="onChange">
+    {{item.label}}
+    </view>
+  </view>
+
+</view>

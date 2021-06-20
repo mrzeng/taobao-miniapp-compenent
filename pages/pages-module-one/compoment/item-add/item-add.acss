@@ -1,0 +1,53 @@
+.cpt-create-plan-balloon{
+  width: 280px;
+  height: 195px;
+  background: #FFFFFF;
+  border: 1px solid #E4E7ED;
+  position: absolute;
+  padding: 0 20px 20px 20px;
+  box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.06);
+  z-index: 2000;
+}
+.cpt-create-plan-balloon::before{
+    content: '';
+     width: 0;
+    height: 0;
+    border-width: 0 16px 16px;
+    border-style: solid;
+    border-color: transparent transparent #fff;
+    position: relative;
+    top:-28px;
+    left:40%;
+}
+.cpt-create-plan-title{
+  font-size: 14px;
+  font-family: MicrosoftYaHei;
+  color: #303133;
+  display: flex;
+  justify-content: center;
+}
+.cpt-create-plan-input{
+  margin-top: 20px;
+  width: 220px;
+  height: 36px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+}
+
+.cpt-create-plan-des{
+  margin-top: 14px;
+  display: flex;
+  font-size: 12px;
+  font-family: MicrosoftYaHeiLight;
+  color: #333333;
+}
+
+.cpt-create-plan-btns{
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-around;
+}

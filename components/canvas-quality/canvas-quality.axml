@@ -1,0 +1,3 @@
+<view>
+  <canvas id="{{canvasId}}" type="{{type}}" width="{{cw}}" height="{{ch}}" ></canvas>
+</view>

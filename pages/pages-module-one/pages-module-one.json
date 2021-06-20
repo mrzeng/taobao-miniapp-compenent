@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-tab-one":"./compoment/my-tab-one/my-tab-one",
+    "my-tab-twe":"./compoment/my-tab-twe/my-tab-twe"
+  }
+}

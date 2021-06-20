@@ -1,0 +1,18 @@
+<!-- <view> -->
+  <!-- 选中 -->
+<view a:if="{{item.checked}}" class="cpt-plan-card-checked">
+  <image mode="scaleToFill" style="width:16px;height:16px;margin-right:4px;" 
+    src="/assets/btn_sel.png"/>
+     {{ item.title }}
+  <image mode="scaleToFill" style="width:29px;height:25px;position:absolute;top:0;right:0;" 
+    src="/assets/icon_gou.png"/>
+</view>
+
+<!-- 未选择 -->
+<view a:else class="cpt-plan-card">
+  <view class="check-icon">
+  </view>
+   {{ item.title }}
+</view>
+
+<!-- </view> -->
